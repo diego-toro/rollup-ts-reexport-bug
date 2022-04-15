@@ -1,0 +1,19 @@
+{
+  "name": "rollup-ts-reexport-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.5",
+    "react": "^18.0.0",
+    "rollup": "^2.70.2",
+    "rollup-plugin-ts": "^2.0.5",
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  }
+}
