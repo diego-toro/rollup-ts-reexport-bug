@@ -1,4 +1,5 @@
 import ts from "rollup-plugin-ts";
+import postcss from "rollup-plugin-postcss";
 
 export default {
   input: "./src/index.ts",
@@ -7,5 +8,13 @@ export default {
     format: "es",
   },
   external: ["react/jsx-runtime"],
-  plugins: [ts()],
+  plugins: [
+    postcss({
+      namedExports: true,
+      extract: true,
+      modules: true,
+      autoModules: true,
+    }),
+    ts(),
+  ],
 };
